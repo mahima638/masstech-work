@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Verify 2FA";
+}
+
+<h2>Authenticator Verification</h2>
+
+<p>
+    Open your Authenticator app and enter the 6-digit code.
+</p>
+
+<form asp-action="Verify2FA" method="post">
+
+    <input type="text"
+           name="code"
+           maxlength="6"
+           minlength="6"
+           placeholder="Enter 6-digit OTP"
+           required />
+
+    <button type="submit">
+        Verify OTP
+    </button>
+
+</form>
+
+@if (ViewBag.Error != null)
+{
+    <p style="color:red;">
+        @ViewBag.Error
+    </p>
+}

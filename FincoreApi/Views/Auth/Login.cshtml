@@ -1,0 +1,21 @@
+﻿@using Fincore.Domain.Entity
+@model User
+
+<h2>Login</h2>
+
+<form asp-action="Login" method="post">
+
+    <div>
+        <label>Email</label>
+        <input asp-for="email" />
+    </div>
+
+    <div>
+        <label>Password</label>
+        <input asp-for="pass" type="password" />
+    </div>
+
+    <button type="submit">Login</button>
+
+</form>
+

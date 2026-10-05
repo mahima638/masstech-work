@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Setup 2FA";
+}
+
+<h2>Setup Authenticator</h2>
+
+<p>
+    Scan this QR code using Microsoft Authenticator or Google Authenticator.
+</p>
+
+<img src="@ViewBag.QRCode"
+     alt="Authenticator QR Code"
+     width="250"
+     height="250" />
+
+
+
+<br />
+<br />
+
+<p>
+    After scanning, your Authenticator app will show a 6-digit code.
+</p>
+<hr />
+
+<h3>Verify Authenticator</h3>
+
+<p>Enter the 6-digit code shown in your Authenticator app.</p>
+
+<form asp-action="Enable2FA" method="post">
+
+    <input type="text"
+           name="code"
+           maxlength="6"
+           placeholder="Enter 6-digit OTP"
+           required />
+
+    <button type="submit">
+        Enable 2FA
+    </button>
+
+</form>

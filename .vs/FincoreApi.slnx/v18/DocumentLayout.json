@@ -1,0 +1,346 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\swaro\\source\\repos\\FincoreApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{80AC14AD-68AB-EDD2-31B3-865C520EB217}|FincoreApi\\FincoreApi.csproj|c:\\users\\swaro\\source\\repos\\fincoreapi\\fincoreapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80AC14AD-68AB-EDD2-31B3-865C520EB217}|FincoreApi\\FincoreApi.csproj|solutionrelative:fincoreapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B9FA268-A598-DEBD-515A-0EFA806CC12B}|Fincore.Domain\\Fincore.Domain.csproj|c:\\users\\swaro\\source\\repos\\fincoreapi\\fincore.domain\\entity\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B9FA268-A598-DEBD-515A-0EFA806CC12B}|Fincore.Domain\\Fincore.Domain.csproj|solutionrelative:fincore.domain\\entity\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80AC14AD-68AB-EDD2-31B3-865C520EB217}|FincoreApi\\FincoreApi.csproj|c:\\users\\swaro\\source\\repos\\fincoreapi\\fincoreapi\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{80AC14AD-68AB-EDD2-31B3-865C520EB217}|FincoreApi\\FincoreApi.csproj|solutionrelative:fincoreapi\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80AC14AD-68AB-EDD2-31B3-865C520EB217}|FincoreApi\\FincoreApi.csproj|c:\\users\\swaro\\source\\repos\\fincoreapi\\fincoreapi\\views\\auth\\verify2fa.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{80AC14AD-68AB-EDD2-31B3-865C520EB217}|FincoreApi\\FincoreApi.csproj|solutionrelative:fincoreapi\\views\\auth\\verify2fa.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80AC14AD-68AB-EDD2-31B3-865C520EB217}|FincoreApi\\FincoreApi.csproj|c:\\users\\swaro\\source\\repos\\fincoreapi\\fincoreapi\\views\\auth\\setup2fa.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{80AC14AD-68AB-EDD2-31B3-865C520EB217}|FincoreApi\\FincoreApi.csproj|solutionrelative:fincoreapi\\views\\auth\\setup2fa.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80AC14AD-68AB-EDD2-31B3-865C520EB217}|FincoreApi\\FincoreApi.csproj|c:\\users\\swaro\\source\\repos\\fincoreapi\\fincoreapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80AC14AD-68AB-EDD2-31B3-865C520EB217}|FincoreApi\\FincoreApi.csproj|solutionrelative:fincoreapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80AC14AD-68AB-EDD2-31B3-865C520EB217}|FincoreApi\\FincoreApi.csproj|c:\\users\\swaro\\source\\repos\\fincoreapi\\fincoreapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{80AC14AD-68AB-EDD2-31B3-865C520EB217}|FincoreApi\\FincoreApi.csproj|solutionrelative:fincoreapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B9FA268-A598-DEBD-515A-0EFA806CC12B}|Fincore.Domain\\Fincore.Domain.csproj|c:\\users\\swaro\\source\\repos\\fincoreapi\\fincore.domain\\entity\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B9FA268-A598-DEBD-515A-0EFA806CC12B}|Fincore.Domain\\Fincore.Domain.csproj|solutionrelative:fincore.domain\\entity\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CC24A64-68D0-FBAC-4376-60CA3EBBC5A1}|Fincore.Infrastructure\\Fincore.Infrastructure.csproj|c:\\users\\swaro\\source\\repos\\fincoreapi\\fincore.infrastructure\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CC24A64-68D0-FBAC-4376-60CA3EBBC5A1}|Fincore.Infrastructure\\Fincore.Infrastructure.csproj|solutionrelative:fincore.infrastructure\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80AC14AD-68AB-EDD2-31B3-865C520EB217}|FincoreApi\\FincoreApi.csproj|c:\\users\\swaro\\source\\repos\\fincoreapi\\fincoreapi\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80AC14AD-68AB-EDD2-31B3-865C520EB217}|FincoreApi\\FincoreApi.csproj|solutionrelative:fincoreapi\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80AC14AD-68AB-EDD2-31B3-865C520EB217}|FincoreApi\\FincoreApi.csproj|c:\\users\\swaro\\source\\repos\\fincoreapi\\fincoreapi\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80AC14AD-68AB-EDD2-31B3-865C520EB217}|FincoreApi\\FincoreApi.csproj|solutionrelative:fincoreapi\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80AC14AD-68AB-EDD2-31B3-865C520EB217}|FincoreApi\\FincoreApi.csproj|c:\\users\\swaro\\source\\repos\\fincoreapi\\fincoreapi\\views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{80AC14AD-68AB-EDD2-31B3-865C520EB217}|FincoreApi\\FincoreApi.csproj|solutionrelative:fincoreapi\\views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80AC14AD-68AB-EDD2-31B3-865C520EB217}|FincoreApi\\FincoreApi.csproj|c:\\users\\swaro\\source\\repos\\fincoreapi\\fincoreapi\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{80AC14AD-68AB-EDD2-31B3-865C520EB217}|FincoreApi\\FincoreApi.csproj|solutionrelative:fincoreapi\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80AC14AD-68AB-EDD2-31B3-865C520EB217}|FincoreApi\\FincoreApi.csproj|c:\\users\\swaro\\source\\repos\\fincoreapi\\fincoreapi\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{80AC14AD-68AB-EDD2-31B3-865C520EB217}|FincoreApi\\FincoreApi.csproj|solutionrelative:fincoreapi\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80AC14AD-68AB-EDD2-31B3-865C520EB217}|FincoreApi\\FincoreApi.csproj|c:\\users\\swaro\\source\\repos\\fincoreapi\\fincoreapi\\fincoreapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{80AC14AD-68AB-EDD2-31B3-865C520EB217}|FincoreApi\\FincoreApi.csproj|solutionrelative:fincoreapi\\fincoreapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CC24A64-68D0-FBAC-4376-60CA3EBBC5A1}|Fincore.Infrastructure\\Fincore.Infrastructure.csproj|c:\\users\\swaro\\source\\repos\\fincoreapi\\fincore.infrastructure\\fincore.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{0CC24A64-68D0-FBAC-4376-60CA3EBBC5A1}|Fincore.Infrastructure\\Fincore.Infrastructure.csproj|solutionrelative:fincore.infrastructure\\fincore.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83228B3E-797B-92E2-B76D-108497A84852}|Fincore.Application\\Fincore.Application.csproj|c:\\users\\swaro\\source\\repos\\fincoreapi\\fincore.application\\fincore.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{83228B3E-797B-92E2-B76D-108497A84852}|Fincore.Application\\Fincore.Application.csproj|solutionrelative:fincore.application\\fincore.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CC24A64-68D0-FBAC-4376-60CA3EBBC5A1}|Fincore.Infrastructure\\Fincore.Infrastructure.csproj|c:\\users\\swaro\\source\\repos\\fincoreapi\\fincore.infrastructure\\migrations\\20260930165024_addtwofactortouser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CC24A64-68D0-FBAC-4376-60CA3EBBC5A1}|Fincore.Infrastructure\\Fincore.Infrastructure.csproj|solutionrelative:fincore.infrastructure\\migrations\\20260930165024_addtwofactortouser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CC24A64-68D0-FBAC-4376-60CA3EBBC5A1}|Fincore.Infrastructure\\Fincore.Infrastructure.csproj|c:\\users\\swaro\\source\\repos\\fincoreapi\\fincore.infrastructure\\migrations\\20260930151831_test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CC24A64-68D0-FBAC-4376-60CA3EBBC5A1}|Fincore.Infrastructure\\Fincore.Infrastructure.csproj|solutionrelative:fincore.infrastructure\\migrations\\20260930151831_test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CC24A64-68D0-FBAC-4376-60CA3EBBC5A1}|Fincore.Infrastructure\\Fincore.Infrastructure.csproj|c:\\users\\swaro\\source\\repos\\fincoreapi\\fincore.infrastructure\\migrations\\20260930152811_adduserrolerelationship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CC24A64-68D0-FBAC-4376-60CA3EBBC5A1}|Fincore.Infrastructure\\Fincore.Infrastructure.csproj|solutionrelative:fincore.infrastructure\\migrations\\20260930152811_adduserrolerelationship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\swaro\\source\\repos\\FincoreApi\\Fincore.Domain\\Entity\\User.cs",
+              "RelativeDocumentMoniker": "Fincore.Domain\\Entity\\User.cs",
+              "ToolTip": "C:\\Users\\swaro\\source\\repos\\FincoreApi\\Fincore.Domain\\Entity\\User.cs",
+              "RelativeToolTip": "Fincore.Domain\\Entity\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-29T15:45:01.906Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\swaro\\source\\repos\\FincoreApi\\FincoreApi\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "FincoreApi\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\swaro\\source\\repos\\FincoreApi\\FincoreApi\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "FincoreApi\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAqwBsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T07:44:49.128Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\swaro\\source\\repos\\FincoreApi\\FincoreApi\\Program.cs",
+              "RelativeDocumentMoniker": "FincoreApi\\Program.cs",
+              "ToolTip": "C:\\Users\\swaro\\source\\repos\\FincoreApi\\FincoreApi\\Program.cs",
+              "RelativeToolTip": "FincoreApi\\Program.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAADwvyQAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-29T15:36:30.732Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\swaro\\source\\repos\\FincoreApi\\FincoreApi\\Views\\Auth\\Login.cshtml",
+              "RelativeDocumentMoniker": "FincoreApi\\Views\\Auth\\Login.cshtml",
+              "ToolTip": "C:\\Users\\swaro\\source\\repos\\FincoreApi\\FincoreApi\\Views\\Auth\\Login.cshtml",
+              "RelativeToolTip": "FincoreApi\\Views\\Auth\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-30T07:45:19.717Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Setup2FA.cshtml",
+              "DocumentMoniker": "C:\\Users\\swaro\\source\\repos\\FincoreApi\\FincoreApi\\Views\\Auth\\Setup2FA.cshtml",
+              "RelativeDocumentMoniker": "FincoreApi\\Views\\Auth\\Setup2FA.cshtml",
+              "ToolTip": "C:\\Users\\swaro\\source\\repos\\FincoreApi\\FincoreApi\\Views\\Auth\\Setup2FA.cshtml",
+              "RelativeToolTip": "FincoreApi\\Views\\Auth\\Setup2FA.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-30T16:52:07.417Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Verify2FA.cshtml",
+              "DocumentMoniker": "C:\\Users\\swaro\\source\\repos\\FincoreApi\\FincoreApi\\Views\\Auth\\Verify2FA.cshtml",
+              "RelativeDocumentMoniker": "FincoreApi\\Views\\Auth\\Verify2FA.cshtml",
+              "ToolTip": "C:\\Users\\swaro\\source\\repos\\FincoreApi\\FincoreApi\\Views\\Auth\\Verify2FA.cshtml",
+              "RelativeToolTip": "FincoreApi\\Views\\Auth\\Verify2FA.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-30T17:10:45.306Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\swaro\\source\\repos\\FincoreApi\\FincoreApi\\appsettings.json",
+              "RelativeDocumentMoniker": "FincoreApi\\appsettings.json",
+              "ToolTip": "C:\\Users\\swaro\\source\\repos\\FincoreApi\\FincoreApi\\appsettings.json",
+              "RelativeToolTip": "FincoreApi\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-09-29T15:35:28.524Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "20260930165024_AddTwoFactorToUser.cs",
+              "DocumentMoniker": "C:\\Users\\swaro\\source\\repos\\FincoreApi\\Fincore.Infrastructure\\Migrations\\20260930165024_AddTwoFactorToUser.cs",
+              "RelativeDocumentMoniker": "Fincore.Infrastructure\\Migrations\\20260930165024_AddTwoFactorToUser.cs",
+              "ToolTip": "C:\\Users\\swaro\\source\\repos\\FincoreApi\\Fincore.Infrastructure\\Migrations\\20260930165024_AddTwoFactorToUser.cs",
+              "RelativeToolTip": "Fincore.Infrastructure\\Migrations\\20260930165024_AddTwoFactorToUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T16:50:25.181Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Role.cs",
+              "DocumentMoniker": "C:\\Users\\swaro\\source\\repos\\FincoreApi\\Fincore.Domain\\Entity\\Role.cs",
+              "RelativeDocumentMoniker": "Fincore.Domain\\Entity\\Role.cs",
+              "ToolTip": "C:\\Users\\swaro\\source\\repos\\FincoreApi\\Fincore.Domain\\Entity\\Role.cs",
+              "RelativeToolTip": "Fincore.Domain\\Entity\\Role.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T15:16:25.928Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "20260930151831_test.cs",
+              "DocumentMoniker": "C:\\Users\\swaro\\source\\repos\\FincoreApi\\Fincore.Infrastructure\\Migrations\\20260930151831_test.cs",
+              "RelativeDocumentMoniker": "Fincore.Infrastructure\\Migrations\\20260930151831_test.cs",
+              "ToolTip": "C:\\Users\\swaro\\source\\repos\\FincoreApi\\Fincore.Infrastructure\\Migrations\\20260930151831_test.cs",
+              "RelativeToolTip": "Fincore.Infrastructure\\Migrations\\20260930151831_test.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T15:18:32.197Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "20260930152811_AddUserRoleRelationship.cs",
+              "DocumentMoniker": "C:\\Users\\swaro\\source\\repos\\FincoreApi\\Fincore.Infrastructure\\Migrations\\20260930152811_AddUserRoleRelationship.cs",
+              "RelativeDocumentMoniker": "Fincore.Infrastructure\\Migrations\\20260930152811_AddUserRoleRelationship.cs",
+              "ToolTip": "C:\\Users\\swaro\\source\\repos\\FincoreApi\\Fincore.Infrastructure\\Migrations\\20260930152811_AddUserRoleRelationship.cs",
+              "RelativeToolTip": "Fincore.Infrastructure\\Migrations\\20260930152811_AddUserRoleRelationship.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T15:28:11.518Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\swaro\\source\\repos\\FincoreApi\\Fincore.Infrastructure\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Fincore.Infrastructure\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\swaro\\source\\repos\\FincoreApi\\Fincore.Infrastructure\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Fincore.Infrastructure\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-29T15:37:41.254Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\swaro\\source\\repos\\FincoreApi\\FincoreApi\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "FincoreApi\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\swaro\\source\\repos\\FincoreApi\\FincoreApi\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "FincoreApi\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T14:42:31.332Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\swaro\\source\\repos\\FincoreApi\\FincoreApi\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "FincoreApi\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\swaro\\source\\repos\\FincoreApi\\FincoreApi\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "FincoreApi\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T08:02:27.821Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "C:\\Users\\swaro\\source\\repos\\FincoreApi\\FincoreApi\\Views\\Admin\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "FincoreApi\\Views\\Admin\\Dashboard.cshtml",
+              "ToolTip": "C:\\Users\\swaro\\source\\repos\\FincoreApi\\FincoreApi\\Views\\Admin\\Dashboard.cshtml",
+              "RelativeToolTip": "FincoreApi\\Views\\Admin\\Dashboard.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-30T14:44:04.093Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "FincoreApi.csproj",
+              "DocumentMoniker": "C:\\Users\\swaro\\source\\repos\\FincoreApi\\FincoreApi\\FincoreApi.csproj",
+              "RelativeDocumentMoniker": "FincoreApi\\FincoreApi.csproj",
+              "ToolTip": "C:\\Users\\swaro\\source\\repos\\FincoreApi\\FincoreApi\\FincoreApi.csproj",
+              "RelativeToolTip": "FincoreApi\\FincoreApi.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-09-30T07:45:50.555Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "C:\\Users\\swaro\\source\\repos\\FincoreApi\\FincoreApi\\Views\\Shared\\Error.cshtml",
+              "RelativeDocumentMoniker": "FincoreApi\\Views\\Shared\\Error.cshtml",
+              "ToolTip": "C:\\Users\\swaro\\source\\repos\\FincoreApi\\FincoreApi\\Views\\Shared\\Error.cshtml",
+              "RelativeToolTip": "FincoreApi\\Views\\Shared\\Error.cshtml",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAAAYAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-30T08:15:21.895Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\swaro\\source\\repos\\FincoreApi\\FincoreApi\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "FincoreApi\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\swaro\\source\\repos\\FincoreApi\\FincoreApi\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "FincoreApi\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-30T08:13:38.418Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Fincore.Infrastructure.csproj",
+              "DocumentMoniker": "C:\\Users\\swaro\\source\\repos\\FincoreApi\\Fincore.Infrastructure\\Fincore.Infrastructure.csproj",
+              "RelativeDocumentMoniker": "Fincore.Infrastructure\\Fincore.Infrastructure.csproj",
+              "ToolTip": "C:\\Users\\swaro\\source\\repos\\FincoreApi\\Fincore.Infrastructure\\Fincore.Infrastructure.csproj",
+              "RelativeToolTip": "Fincore.Infrastructure\\Fincore.Infrastructure.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-09-29T15:35:01.808Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Fincore.Application.csproj",
+              "DocumentMoniker": "C:\\Users\\swaro\\source\\repos\\FincoreApi\\Fincore.Application\\Fincore.Application.csproj",
+              "RelativeDocumentMoniker": "Fincore.Application\\Fincore.Application.csproj",
+              "ToolTip": "C:\\Users\\swaro\\source\\repos\\FincoreApi\\Fincore.Application\\Fincore.Application.csproj",
+              "RelativeToolTip": "Fincore.Application\\Fincore.Application.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-09-29T15:34:35.232Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

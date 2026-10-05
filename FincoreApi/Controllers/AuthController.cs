@@ -1,14 +1,16 @@
-﻿using Fincore.Domain.Entity;
+﻿using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Security.Cryptography;
+using System.Security.Principal;
+using System.Text;
+using Fincore.Domain.Entity;
 using Fincore.Infrastructure.Data;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using OtpNet;
 using QRCoder;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
+using static QRCoder.PayloadGenerator;
 
 namespace FincoreApi.Controllers
 {
@@ -16,44 +18,84 @@ namespace FincoreApi.Controllers
     {
         private readonly IConfiguration con;
         private readonly AppDbContext db;
+
         public AuthController(IConfiguration con, AppDbContext db)
         {
             this.con = con;
             this.db = db;
-            
         }
+
         public IActionResult Login()
         {
             return View();
         }
+
         [HttpPost]
         public IActionResult Login(User u)
         {
-            var user = db.user.Include(x => x.role).FirstOrDefault(x => x.email == u.email && x.pass == u.pass);
+            var user = db.user
+                .Include(x => x.role)
+                .FirstOrDefault(x => x.email == u.email && x.pass == u.pass);
 
             if (user == null)
             {
                 ViewBag.Error = "Invalid email or password";
                 return View(u);
             }
-            if (user.TwoFactorEnabled)
-            {
-                TempData["TwoFactorUserId"] = user.eid;
 
-                return RedirectToAction("Verify2FA");
+            if (!user.TwoFactorEnabled)
+            {
+                TempData["Setup2FAUserId"] = user.eid;
+
+                return RedirectToAction("Setup2FA");
             }
-            return CreateJwtAndLogin(user);
+
+            TempData["TwoFactorUserId"] = user.eid;
+
+            return RedirectToAction("Verify2FA");
         }
-        public  IActionResult CreateJwtAndLogin(User user)
+
+        [HttpGet]
+        public IActionResult Register()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Register(User u)
+        {
+            var existingUser = db.user
+                .FirstOrDefault(x => x.email == u.email);
+
+            if (existingUser != null)
+            {
+                ViewBag.Error = "Email already exists";
+                return View(u);
+            }
+
+            db.user.Add(u);
+            db.SaveChanges();
+
+            return RedirectToAction("Login");
+        }
+
+        public IActionResult CreateJwtAndLogin(User user)
         {
             var claims = new[]
             {
-            new Claim(ClaimTypes.Name, user.email),
-            new Claim(ClaimTypes.Role, user.role.rname)
-           };
+                new Claim(ClaimTypes.Name, user.email),
+                new Claim(ClaimTypes.Role, user.role.rname)
+            };
 
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(con["JwtConfig:Key"]!));
-            var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+            var key = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes(con["JwtConfig:Key"]!)
+            );
+
+            var credentials = new SigningCredentials(
+                key,
+                SecurityAlgorithms.HmacSha256
+            );
+
             var token = new JwtSecurityToken(
                 issuer: con["JwtConfig:Issuer"],
                 audience: con["JwtConfig:Audience"],
@@ -67,14 +109,24 @@ namespace FincoreApi.Controllers
 
             Response.Cookies.Append("JwtToken", tokenString);
 
+            if (user.role.rname == "Vendor")
+            {
+                return RedirectToAction("Dashboard", "Vendor");
+            }
+
             return RedirectToAction("Dashboard", "Admin");
         }
 
         public IActionResult Setup2FA()
         {
-            var email = User.Identity?.Name;
+            var userId = TempData["Setup2FAUserId"];
 
-            var user = db.user.FirstOrDefault(x => x.email == email);
+            if (userId == null)
+            {
+                return RedirectToAction("Login");
+            }
+
+            var user = db.user.Include(x => x.role).FirstOrDefault(x => x.eid == (int)userId);
 
             if (user == null)
             {
@@ -90,36 +142,31 @@ namespace FincoreApi.Controllers
                 db.SaveChanges();
             }
 
-            string otpUri =
-                $"otpauth://totp/Fincore:{Uri.EscapeDataString(user.email)}" +
+            TempData["Setup2FAUserId"] = user.eid;
+
+            string otpUri =$"otpauth://totp/Fincore:{Uri.EscapeDataString(user.email)}" +
                 $"?secret={user.TwoFactorSecret}&issuer=Fincore";
 
-        
             var qrGenerator = new QRCodeGenerator();
 
-            var qrCodeData = qrGenerator.CreateQrCode(
-                otpUri,
-                QRCodeGenerator.ECCLevel.Q
-            );
-
+            var qrCodeData = qrGenerator.CreateQrCode(otpUri, QRCodeGenerator.ECCLevel.Q);
             var qrCode = new PngByteQRCode(qrCodeData);
-
             var qrCodeBytes = qrCode.GetGraphic(20);
-
-            ViewBag.QRCode =
-                "data:image/png;base64," +
-                Convert.ToBase64String(qrCodeBytes);
-
-          
-
+            ViewBag.QRCode = "data:image/png;base64," + Convert.ToBase64String(qrCodeBytes);
             return View();
         }
+
         [HttpPost]
         public IActionResult Enable2FA(string code)
         {
-            var email = User.Identity?.Name;
+            var userId = TempData["Setup2FAUserId"];
 
-            var user = db.user.FirstOrDefault(x => x.email == email);
+            if (userId == null)
+            {
+                return RedirectToAction("Login");
+            }
+
+            var user = db.user.Include(x => x.role).FirstOrDefault(x => x.eid == (int)userId);
 
             if (user == null)
             {
@@ -130,7 +177,11 @@ namespace FincoreApi.Controllers
 
             var totp = new Totp(secretBytes);
 
-            bool isValid = totp.VerifyTotp(code, out long timeStepMatched, new VerificationWindow(1, 1));
+            bool isValid = totp.VerifyTotp(
+                code,
+                out _,
+                new VerificationWindow(1, 1)
+            );
 
             if (isValid)
             {
@@ -138,11 +189,14 @@ namespace FincoreApi.Controllers
 
                 db.SaveChanges();
 
-                return Content("2FA Enabled Successfully!");
+                return CreateJwtAndLogin(user);
             }
+
+            TempData["Setup2FAUserId"] = user.eid;
 
             return Content("Invalid OTP!");
         }
+
         [HttpGet]
         public IActionResult Verify2FA()
         {
@@ -159,7 +213,9 @@ namespace FincoreApi.Controllers
                 return RedirectToAction("Login");
             }
 
-            var user = db.user.Include(x => x.role).FirstOrDefault(x => x.eid == (int)userId);
+            var user = db.user
+                .Include(x => x.role)
+                .FirstOrDefault(x => x.eid == (int)userId);
 
             if (user == null)
             {
@@ -170,7 +226,11 @@ namespace FincoreApi.Controllers
 
             var totp = new Totp(secretBytes);
 
-            bool isValid = totp.VerifyTotp(code, out long timeStepMatched, new VerificationWindow(1, 1));
+            bool isValid = totp.VerifyTotp(
+                code,
+                out long timeStepMatched,
+                new VerificationWindow(1, 1)
+            );
 
             if (isValid)
             {

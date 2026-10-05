@@ -16,8 +16,8 @@ namespace Fincore.Domain.Entity
         public string pass { get; set; }
 
         [ForeignKey("rid")]
-        public int rid { get; set; }
-        public Role role { get; set; }
+        public int? rid { get; set; } = 2;
+        public Role  role { get; set; }
         public bool TwoFactorEnabled { get; set; }
 
         public string? TwoFactorSecret { get; set; }

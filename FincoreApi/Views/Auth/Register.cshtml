@@ -1,0 +1,29 @@
+﻿@model Fincore.Domain.Entity.User
+
+<h2>Register</h2>
+
+<form asp-action="Register" method="post">
+
+    <div>
+        <label>Email</label>
+        <input asp-for="email" />
+    </div>
+
+    <div>
+        <label>Password</label>
+        <input asp-for="pass" type="password" />
+    </div>
+
+    <button type="submit">Register</button>
+
+</form>
+
+@if (ViewBag.Error != null)
+{
+    <p style="color:red">@ViewBag.Error</p>
+}
+
+<p>
+    Already have an account?
+    <a asp-action="Login">Login</a>
+</p>

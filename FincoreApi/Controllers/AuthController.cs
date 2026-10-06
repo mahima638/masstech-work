@@ -81,6 +81,7 @@ namespace FincoreApi.Controllers
 
         public IActionResult CreateJwtAndLogin(User user)
         {
+            HttpContext.Session.SetInt32("UserId", user.eid);
             var claims = new[]
             {
                 new Claim(ClaimTypes.Name, user.email),

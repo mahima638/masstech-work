@@ -1,0 +1,75 @@
+﻿@model List<Fincore.Domain.Entity.RFQ>
+
+@{
+    ViewData["Title"] = "My RFQs";
+}
+
+<div class="container mt-4">
+
+    <h2 class="mb-4">My RFQs</h2>
+
+    <div class="card shadow-sm">
+        <div class="card-body">
+
+            <table class="table table-bordered table-hover">
+
+                <thead class="table-dark">
+                    <tr>
+                        <th>RFQ No</th>
+                        <th>Contact Person</th>
+                        <th>Bid Start</th>
+                        <th>Bid End</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    @foreach (var rfq in Model)
+                    {
+                        <tr>
+
+                            <td>@rfq.RFQNo</td>
+
+                            <td>@rfq.ContactPerson</td>
+
+                            <td>
+                                @rfq.BidDate?.ToString("dd-MM-yyyy")
+                            </td>
+
+                            <td>
+                                @rfq.ExpiryDateofBid?.ToString("dd-MM-yyyy")
+                            </td>
+
+                            <td>
+                                <span class="badge bg-success">
+                                    @rfq.Status
+                                </span>
+                            </td>
+
+                            <td>
+                                <a asp-action="ViewRFQ"
+                                   asp-route-id="@rfq.RFQId"
+                                   class="btn btn-sm btn-primary">
+                                    View
+                                </a>
+
+                                <a asp-action="Quote"
+                                   asp-route-id="@rfq.RFQId"
+                                   class="btn btn-sm btn-success">
+                                    Submit Quotation
+                                </a>
+                            </td>
+
+                        </tr>
+                    }
+
+                </tbody>
+
+            </table>
+
+        </div>
+    </div>
+
+</div>

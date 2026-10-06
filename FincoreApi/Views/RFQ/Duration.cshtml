@@ -1,0 +1,166 @@
+﻿@model Fincore.Domain.Entity.RFQ
+
+@{
+    ViewData["Title"] = "Duration and Vendors";
+}
+
+<div class="container mt-4">
+
+    <h2 class="mb-4">Add RFQ</h2>
+
+   
+    <div class="row text-center mb-4">
+
+        <div class="col-md-4">
+
+            <div class="rounded-circle bg-success text-white mx-auto mb-2"
+                 style="width:40px;height:40px;padding-top:8px;">
+                ✓
+            </div>
+
+            <span>RFQ BID DETAILS</span>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="rounded-circle bg-success text-white mx-auto mb-2"
+                 style="width:40px;height:40px;padding-top:8px;">
+                ✓
+            </div>
+
+            <span>BID ITEMS</span>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="rounded-circle bg-primary text-white mx-auto mb-2"
+                 style="width:40px;height:40px;padding-top:8px;">
+                3
+            </div>
+
+            <strong>DURATION AND VENDORS</strong>
+
+        </div>
+
+    </div>
+
+
+    <div class="card shadow-sm">
+
+        <div class="card-body">
+
+            <h5 class="text-primary mb-4">
+                DURATION AND VENDORS
+            </h5>
+
+
+            <form asp-action="Submit" method="post">
+
+                <input type="hidden"
+                       name="id"
+                       value="@Model.RFQId" />
+
+
+                <div class="row">
+
+                    <!-- Bid Start Date -->
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+                            Bid Start Date
+                        </label>
+
+                        <input type="date"
+                               name="bidStartDate"
+                               class="form-control"
+                               required />
+
+                    </div>
+
+
+                    <!-- Bid End Date -->
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+                            Bid End Date
+                        </label>
+
+                        <input type="date"
+                               name="bidEndDate"
+                               class="form-control"
+                               required />
+
+                    </div>
+
+                </div>
+
+
+                <!-- Vendors -->
+
+                <div class="mb-4">
+
+                    <label class="form-label">
+                        Select Vendors
+                    </label>
+
+                    @foreach (var vendor in ViewBag.Vendors)
+                    {
+                        <div class="form-check">
+
+                            <input class="form-check-input"
+                                   type="checkbox"
+                                   name="vendorIds"
+                                   value="@vendor.eid"
+                                   id="vendor_@vendor.eid" />
+
+                            <label class="form-check-label"
+                                   for="vendor_@vendor.eid">
+
+                                @vendor.email
+
+                            </label>
+
+                        </div>
+                    }
+
+                </div>
+
+
+                <div class="d-flex justify-content-between">
+
+                    <a asp-action="Items"
+                       asp-route-id="@Model.RFQId"
+                       class="btn btn-secondary">
+
+                        Previous
+
+                    </a>
+
+
+                    <button type="submit"
+                            name="action"
+                            value="draft"
+                            class="btn btn-secondary">
+                        Save Draft
+                    </button>
+
+                    <button type="submit"
+                            name="action"
+                            value="submit"
+                            class="btn btn-primary">
+                        Submit RFQ
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>

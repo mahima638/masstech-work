@@ -21,4 +21,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Fincore.Domain\Fincore.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

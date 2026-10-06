@@ -1,0 +1,155 @@
+﻿@model Fincore.Domain.Entity.RFQ
+
+@{
+    ViewData["Title"] = "RFQ Quotations";
+}
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+}
+@{
+    var finalizedQuotation = Model.FinalizedQuotation;
+}
+
+<div class="container mt-4">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+
+        <h2>RFQ Quotations</h2>
+
+        <a asp-action="Index"
+           class="btn btn-secondary">
+            Back
+        </a>
+
+    </div>
+
+    <div class="card mb-4">
+
+        <div class="card-header bg-primary text-white">
+            RFQ Details
+        </div>
+
+        <div class="card-body">
+
+            <strong>RFQ No:</strong>
+            @Model.RFQNo
+
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <div class="card-header bg-primary text-white">
+            Vendor Quotations
+        </div>
+
+        <div class="card-body">
+
+            @{
+                var quotations =
+                    ViewBag.Quotations as List<Fincore.Domain.Entity.RFQQuotation>;
+            }
+
+            @if (quotations != null && quotations.Count > 0)
+            {
+                <table class="table table-bordered">
+
+                    <thead>
+                        <tr>
+                            <th>Vendor ID</th>
+                            <th>Quoted Amount</th>
+                            <th>Delivery Date</th>
+                            <th>Payment Terms</th>
+                            <th>Remarks</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        @foreach (var quotation in quotations)
+                        {
+                            <tr>
+
+                                <td>
+                                    @quotation.VendorId
+                                </td>
+
+                                <td>
+                                    @quotation.QuotedAmount
+                                </td>
+
+                                <td>
+                                    @quotation.DeliveryDate.ToString("dd-MM-yyyy")
+                                </td>
+
+                                <td>
+                                    @quotation.PaymentTerms
+                                </td>
+
+                                <td>
+                                    @quotation.Remarks
+                                </td>
+
+                                <td>
+                                    <span class="badge bg-warning">
+                                        @quotation.Status
+                                    </span>
+                                </td>
+                                <td>
+
+                                    @if (finalizedQuotation != null &&
+                                         finalizedQuotation.QuotationId == quotation.QuotationId)
+                                    {
+                                        <button type="button"
+                                                class="btn btn-secondary btn-sm"
+                                                disabled>
+                                            Selected
+                                        </button>
+                                    }
+                                    else
+                                    {
+                                        <form asp-action="FinalizeQuotation" method="post">
+
+                                            <input type="hidden"
+                                                   name="rfqId"
+                                                   value="@Model.RFQId" />
+
+                                            <input type="hidden"
+                                                   name="quotationId"
+                                                   value="@quotation.QuotationId" />
+
+                                            <button type="submit"
+                                                    class="btn btn-success btn-sm">
+                                                Select
+                                            </button>
+
+                                        </form>
+                                    }
+
+                                </td>
+
+                            </tr>
+                        }
+
+                    </tbody>
+
+                </table>
+            }
+            else
+            {
+                <div class="alert alert-warning">
+                    No quotations submitted yet.
+                </div>
+            }
+
+        </div>
+
+    </div>
+
+</div>

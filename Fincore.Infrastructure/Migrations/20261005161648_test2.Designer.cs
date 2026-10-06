@@ -4,6 +4,7 @@ using Fincore.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Fincore.Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20261005161648_test2")]
+    partial class test2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -50,7 +53,7 @@ namespace Fincore.Infrastructure.Migrations
                     b.ToTable("FinalizedQuotations");
                 });
 
-            modelBuilder.Entity("Fincore.Domain.Entity.RFQ", b =>
+            modelBuilder.Entity("Fincore.Domain.Entity.Fincore.Domain.Entity.RFQ", b =>
                 {
                     b.Property<int>("RFQId")
                         .ValueGeneratedOnAdd()
@@ -77,6 +80,7 @@ namespace Fincore.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("IndentNo")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ItemName")
@@ -92,6 +96,7 @@ namespace Fincore.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("RFQNo")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("ReqDeliveryDate")
@@ -131,9 +136,6 @@ namespace Fincore.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FactoryCode")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("IndentNo")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ItemName")
@@ -297,7 +299,7 @@ namespace Fincore.Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
-                    b.HasOne("Fincore.Domain.Entity.RFQ", "RFQ")
+                    b.HasOne("Fincore.Domain.Entity.Fincore.Domain.Entity.RFQ", "RFQ")
                         .WithOne("FinalizedQuotation")
                         .HasForeignKey("Fincore.Domain.Entity.FinalizedQuotation", "RFQId")
                         .OnDelete(DeleteBehavior.NoAction)
@@ -308,7 +310,7 @@ namespace Fincore.Infrastructure.Migrations
                     b.Navigation("RFQQuotation");
                 });
 
-            modelBuilder.Entity("Fincore.Domain.Entity.RFQ", b =>
+            modelBuilder.Entity("Fincore.Domain.Entity.Fincore.Domain.Entity.RFQ", b =>
                 {
                     b.HasOne("Fincore.Domain.Entity.User", "User")
                         .WithMany()
@@ -321,7 +323,7 @@ namespace Fincore.Infrastructure.Migrations
 
             modelBuilder.Entity("Fincore.Domain.Entity.RFQItem", b =>
                 {
-                    b.HasOne("Fincore.Domain.Entity.RFQ", "RFQ")
+                    b.HasOne("Fincore.Domain.Entity.Fincore.Domain.Entity.RFQ", "RFQ")
                         .WithMany("RFQItems")
                         .HasForeignKey("RFQId")
                         .OnDelete(DeleteBehavior.NoAction)
@@ -332,7 +334,7 @@ namespace Fincore.Infrastructure.Migrations
 
             modelBuilder.Entity("Fincore.Domain.Entity.RFQQuotation", b =>
                 {
-                    b.HasOne("Fincore.Domain.Entity.RFQ", "RFQ")
+                    b.HasOne("Fincore.Domain.Entity.Fincore.Domain.Entity.RFQ", "RFQ")
                         .WithMany("RFQQuotations")
                         .HasForeignKey("RFQId")
                         .OnDelete(DeleteBehavior.NoAction)
@@ -361,7 +363,7 @@ namespace Fincore.Infrastructure.Migrations
 
             modelBuilder.Entity("Fincore.Domain.Entity.VendorRFQMapping", b =>
                 {
-                    b.HasOne("Fincore.Domain.Entity.RFQ", "RFQ")
+                    b.HasOne("Fincore.Domain.Entity.Fincore.Domain.Entity.RFQ", "RFQ")
                         .WithMany("RFQVendors")
                         .HasForeignKey("RFQId")
                         .OnDelete(DeleteBehavior.NoAction)
@@ -378,7 +380,7 @@ namespace Fincore.Infrastructure.Migrations
                     b.Navigation("Vendor");
                 });
 
-            modelBuilder.Entity("Fincore.Domain.Entity.RFQ", b =>
+            modelBuilder.Entity("Fincore.Domain.Entity.Fincore.Domain.Entity.RFQ", b =>
                 {
                     b.Navigation("FinalizedQuotation");
 

@@ -1,0 +1,165 @@
+﻿@model Fincore.Domain.Entity.RFQ
+
+@{
+    ViewData["Title"] = "Submit Quotation";
+
+    var myQuotations =
+        ViewBag.MyQuotations as List<Fincore.Domain.Entity.RFQQuotation>;
+}
+
+<div class="container mt-4">
+
+    <h2 class="mb-4">Submit Quotation</h2>
+
+    @if (myQuotations != null && myQuotations.Count > 0)
+    {
+        <div class="card mb-4">
+
+            <div class="card-header bg-secondary text-white">
+                My Previous Quotations
+            </div>
+
+            <div class="card-body">
+
+                <table class="table table-bordered">
+
+                    <thead>
+                        <tr>
+                            <th>Quoted Amount</th>
+                            <th>Delivery Date</th>
+                            <th>Payment Terms</th>
+                            <th>Remarks</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        @foreach (var quotation in myQuotations)
+                        {
+                            <tr>
+                                <td>@quotation.QuotedAmount</td>
+
+                                <td>
+                                    @quotation.DeliveryDate.ToString("dd-MM-yyyy")
+                                </td>
+
+                                <td>
+                                    @quotation.PaymentTerms
+                                </td>
+
+                                <td>
+                                    @quotation.Remarks
+                                </td>
+
+                                <td>
+                                    @quotation.Status
+                                </td>
+                            </tr>
+                        }
+
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>
+    }
+
+    <div class="card">
+
+        <div class="card-header bg-primary text-white">
+            RFQ: @Model.RFQNo
+        </div>
+
+        <div class="card-body">
+
+            <form asp-action="Quote" method="post">
+
+                <input type="hidden"
+                       name="RFQId"
+                       value="@Model.RFQId" />
+
+                <div class="mb-3">
+                    <label class="form-label">
+                        Quoted Amount
+                    </label>
+
+                    <input type="number"
+                           name="QuotedAmount"
+                           class="form-control"
+                           step="0.01"
+                           required />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">
+                        Delivery Date
+                    </label>
+
+                    <input type="date"
+                           name="DeliveryDate"
+                           class="form-control"
+                           required />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">
+                        Payment Terms
+                    </label>
+
+                    <select name="PaymentTerms"
+                            class="form-select"
+                            required>
+
+                        <option value="">
+                            -- Select Payment Terms --
+                        </option>
+
+                        <option value="Advance">
+                            Advance
+                        </option>
+
+                        <option value="50% Advance, 50% on Delivery">
+                            50% Advance, 50% on Delivery
+                        </option>
+
+                        <option value="100% on Delivery">
+                            100% on Delivery
+                        </option>
+
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">
+                        Remarks
+                    </label>
+
+                    <textarea name="Remarks"
+                              class="form-control"
+                              rows="3"></textarea>
+                </div>
+
+                <div class="d-flex justify-content-between">
+
+                    <a asp-action="ViewRFQ"
+                       asp-route-id="@Model.RFQId"
+                       class="btn btn-secondary">
+                        Back
+                    </a>
+
+                    <button type="submit"
+                            class="btn btn-success">
+                        Submit Quotation
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>

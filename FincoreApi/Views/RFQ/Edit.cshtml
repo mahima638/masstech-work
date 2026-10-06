@@ -1,0 +1,51 @@
+﻿@model Fincore.Domain.Entity.RFQ
+
+@{
+    ViewData["Title"] = "Edit RFQ";
+}
+
+<div class="container mt-4">
+
+    <h2 class="mb-4">Edit RFQ</h2>
+
+    <div class="card">
+        <div class="card-body">
+
+            <form asp-action="Edit" method="post">
+
+                <input type="hidden" asp-for="RFQId" />
+
+                <div class="mb-3">
+                    <label class="form-label">RFQ No</label>
+                    <input asp-for="RFQNo"
+                           class="form-control"
+                           readonly />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Mobile No</label>
+                    <input asp-for="Mobile"
+                           class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Contact Person</label>
+                    <input asp-for="ContactPerson"
+                           class="form-control" />
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    Update
+                </button>
+
+                <a asp-action="Index"
+                   class="btn btn-secondary">
+                    Cancel
+                </a>
+
+            </form>
+
+        </div>
+    </div>
+
+</div>
